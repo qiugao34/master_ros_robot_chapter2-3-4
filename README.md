@@ -72,7 +72,7 @@ $ urdf_to_graphiz pan_tilt.urdf
 
 下面是`pan_tilt.pdf`的内容，展示了pan_tilt机械结构的关节和连杆图
 
-<img src="https://raw.githubusercontent.com/qiugao34/master_ros_robot_chapter2-3-4/refs/heads/main/Images/image-20250407193946032.png" alt="image-20250407193946032" style="zoom:33%;" />
+<img src="Images/image-20250407193946032.png" alt="image-20250407193946032" style="zoom:33%;" />
 
 ### 1.3  Visualizing the robot 3D model in RViz
 
