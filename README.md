@@ -155,11 +155,11 @@ $ rosrun xacro xacro pan_tilt.xacro --inorder > pan_tilt_generated.urdf
 
 在`mastering_ros_robot_description_pkg/urdf`下创建`diff_wheeled_robot.xacro`文件，可视化结果如下图：
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250407211410951.png" alt="image-20250407211410951" style="zoom:50%;" />
+<img src="Images/image-20250407211410951.png" alt="image-20250407211410951" style="zoom:50%;" />
 
 在Rviz中显示为
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250407211623695.png" alt="image-20250407211623695" style="zoom: 25%;" />
+<img src="Images/image-20250407211623695.png" alt="image-20250407211623695" style="zoom: 25%;" />
 
 ## 二 Simulating Robots Using  ROS and Gazebo
 
@@ -175,7 +175,7 @@ $ catkin_create_pkg seven_dof_arm_gazebo gazebo_msgs gazebo_plugins gazebo_ros m
 
 启动该文件会获得如下输出
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250408144933823.png" alt="image-20250408144933823" style="zoom: 25%;" />
+<img src="Images/image-20250408144933823.png" alt="image-20250408144933823" style="zoom: 25%;" />
 
 #### 1.1.1 Adding colors and textures to the Gazebo robot  model
 
@@ -254,7 +254,7 @@ $ catkin_create_pkg seven_dof_arm_gazebo gazebo_msgs gazebo_plugins gazebo_ros m
 $ rosrun image_view image_view image:=/rgbd_camera/rgb/image_raw
 ```
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410121028199.png" alt="image-20250410121028199" style="zoom:33%;" />
+<img src="Images/image-20250410121028199.png" alt="image-20250410121028199" style="zoom:33%;" />
 
 查看IR原始图像：
 
@@ -262,7 +262,7 @@ $ rosrun image_view image_view image:=/rgbd_camera/rgb/image_raw
 $ rosrun image_view image_view image:=/rgbd_camera/ir/image_raw
 ```
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410121111339.png" alt="image-20250410121111339" style="zoom:33%;" />
+<img src="Images/image-20250410121111339.png" alt="image-20250410121111339" style="zoom:33%;" />
 
 查看深度图像
 
@@ -270,7 +270,7 @@ $ rosrun image_view image_view image:=/rgbd_camera/ir/image_raw
 $ rosrun image_view image_view image:=/rgbd_camera/depth/image_raw
 ```
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410121232526.png" alt="image-20250410121232526" style="zoom:33%;" />
+<img src="Images/image-20250410121232526.png" alt="image-20250410121232526" style="zoom:33%;" />
 
 另外我们还可以在Rviz中查看点云数据
 
@@ -280,7 +280,7 @@ $ rosrun image_view image_view image:=/rgbd_camera/depth/image_raw
 $ rosrun rviz rviz -f /rgbd_camera_optical_frame
 ```
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410121625494.png" alt="image-20250410121625494" style="zoom:33%;" />
+<img src="Images/image-20250410121625494.png" alt="image-20250410121625494" style="zoom:33%;" />
 
 ### 1.3  Moving robot joints using ROS controllers   in Gazebo
 
@@ -298,13 +298,13 @@ $ rosrun rviz rviz -f /rgbd_camera_optical_frame
 $ rostopic pub /seven_dof_arm/joint4_position_controller/command std_msgs/Float64 1.0
 ```
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410122852983.png" alt="image-20250410122852983" style="zoom:50%;" />
+<img src="Images/image-20250410122852983.png" alt="image-20250410122852983" style="zoom:50%;" />
 
 ### 1.4  Simulating a differential wheeled robot in  Gazebo
 
 对差速轮式机器人仿真，首先创建`diff_wheeled_robot_gazebo`功能包，使用`diff_wheeled_gazebo.launch`启动
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410123612942.png" alt="image-20250410123612942" style="zoom:50%;" />
+<img src="Images/image-20250410123612942.png" alt="image-20250410123612942" style="zoom:50%;" />
 
 #### 1.4.1 Adding the laser scanner to Gazebo
 
@@ -316,7 +316,7 @@ $ rostopic pub /seven_dof_arm/joint4_position_controller/command std_msgs/Float6
 $ roslaunch mastering_ros_robot_description_pkg view_mobile_robot.launch 
 ```
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410124221794.png" alt="image-20250410124221794" style="zoom: 25%;" />
+<img src="Images/image-20250410124221794.png" alt="image-20250410124221794" style="zoom: 25%;" />
 
 #### 1.4.2 Moving the mobile robot in Gazebo
 
@@ -350,7 +350,7 @@ $ roslaunch diff_wheeled_robot_control keyboard_teleop.launch
 rosrun rviz rviz
 ```
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410125642629.png" alt="image-20250410125642629" style="zoom: 25%;" />
+<img src="Images/image-20250410125642629.png" alt="image-20250410125642629" style="zoom: 25%;" />
 
 ## 三 Using the ROS MoveIt!   and Navigation Stack
 
@@ -398,7 +398,7 @@ $ roslaunch seven_dof_arm_config demo.launch
 
 使用Rviz运动规划插件
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410131748431.png" alt="image-20250410131748431" style="zoom:25%;" />
+<img src="Images/image-20250410131748431.png" alt="image-20250410131748431" style="zoom:25%;" />
 
 接下来配置Moveit!软件包与Gazebo接口
 
@@ -414,8 +414,7 @@ $ roslaunch seven_dof_arm_config demo.launch
 
 我们可以在Rviz中启动运动规划，然后使用下面的命令在Gazebo中执行规划的路径：
 
-
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410133302521.png" alt="image-20250410133302521" style="zoom:25%;" />
+<img src="Images/image-20250410133302521.png" alt="image-20250410133302521" style="zoom:25%;" />
 
 ### 3.3  Building a map using SLAM
 
@@ -447,7 +446,7 @@ $ roslaunch diff_wheeled_robot_gazebo diff_wheeled_gazebo_full.launch
 
 启动Rviz并添加Map显示类型，设置话题为`/map`
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410150345180.png" alt="image-20250410150345180" style="zoom:25%;" />
+<img src="Images/image-20250410150345180.png" alt="image-20250410150345180" style="zoom:25%;" />
 
 ### 3.4  Implementing autonomous navigation using  AMCL and a static map
 
@@ -473,6 +472,6 @@ $ roslaunch diff_wheeled_robot_gazebo amcl.launch
 
 2D NavGoal按钮我们就可以控制机器人移动到指定位置
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410151324135.png" alt="image-20250410151324135" style="zoom:25%;" />
+<img src="Images/image-20250410151324135.png" alt="image-20250410151324135" style="zoom:25%;" />
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250410151342595.png" alt="image-20250410151342595" style="zoom:25%;" />
+<img src="Images/image-20250410151342595.png" alt="image-20250410151342595" style="zoom:25%;" />
