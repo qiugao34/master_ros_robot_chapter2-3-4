@@ -72,7 +72,7 @@ $ urdf_to_graphiz pan_tilt.urdf
 
 下面是`pan_tilt.pdf`的内容，展示了pan_tilt机械结构的关节和连杆图
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250407193946032.png" alt="image-20250407193946032" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/qiugao34/master_ros_robot_chapter2-3-4/refs/heads/main/Images/image-20250407193946032.png" alt="image-20250407193946032" style="zoom:33%;" />
 
 ### 1.3  Visualizing the robot 3D model in RViz
 
@@ -84,7 +84,7 @@ $ urdf_to_graphiz pan_tilt.urdf
 $ roslaunch mastering_ros_robot_description_pkg view_demo.launch
 ```
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250407194916834.png" alt="image-20250407194916834" style="zoom: 25%;" />
+<img src="https://raw.githubusercontent.com/qiugao34/master_ros_robot_chapter2-3-4/refs/heads/main/Images/image-20250407194916834.png" alt="image-20250407194916834" style="zoom: 25%;" />
 
 添加附加的GUI窗口需要使用`joint_state_publisher_gui`软件包
 
@@ -147,7 +147,7 @@ $ rosrun xacro xacro pan_tilt.xacro --inorder > pan_tilt_generated.urdf
 
 根据上述规格设计机械臂的xacro文件，在`mastering_ros_robot_description_pkg/urdf`下创建`seven_dof_arm.xacro`文件，使用RViz查看7-DOF机械臂，使用名为`view_arm.launch`的启动文件执行上述任务
 
-<img src="C:\Users\wwn\AppData\Roaming\Typora\typora-user-images\image-20250407210309771.png" alt="image-20250407210309771" style="zoom: 25%;" />
+<img src="https://raw.githubusercontent.com/qiugao34/master_ros_robot_chapter2-3-4/refs/heads/main/Images/image-20250407210309771.png" alt="image-20250407210309771" style="zoom: 25%;" />
 
 ### 1.7 Creating a robot model for the differential  drive mobile robot
 
